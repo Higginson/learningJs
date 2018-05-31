@@ -8,3 +8,25 @@ console.log(Object.getPrototypeOf(a) === b);
 
 console.log(Object.getPrototypeOf(a));
 console.log(a.x);
+
+
+/****************/
+console.log('****************');
+
+
+
+var F = function() {
+    this.foo = 'bar';
+};
+
+var f = new F();
+console.log(Object.getPrototypeOf(f));
+
+
+/****************/
+console.log('****************');
+
+
+var v = Object.setPrototypeOf({}, F.prototype);
+F.call(v);
+console.log(Object.getPrototypeOf(v));
