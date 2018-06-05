@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test getElementByName</title>
+</head>
+<body>
+<fieldset>
+    <ul>
+        <li><input type="radio" name="color" value="blue" id="colorBlue"/><label for="colorBlue">Blue</label>
+        </li>
+
+        <li><input style="width: 30px;" type="radio" name="color" value="red" id="colorRed"/><label
+                for="colorRed">Red</label></li>
+
+        <li><input title="Test greenColor" type="radio" name="color" value="green" id="colorGreen"/><label
+                for="colorGreen">Green</label></li>
+    </ul>
+
+</fieldset>
+
+<script type="text/javascript">
+
+    var colors = document.getElementsByName("color");
+    console.log(colors);
+
+    var colors2 = document.getElementsByTagName("input");
+    console.log(colors2);
+
+    var red = document.getElementById('colorRed');
+    console.log(red.tagName);
+    console.log(red.nodeName);
+
+    red.setAttribute('style', 'width: 50px');
+
+    var id = element.attributes.getNamedItem('id').nodeValue;
+    console.log(id);
+
+
+</script>
+</body>
+</html>

@@ -8,6 +8,23 @@
 <script type="text/javascript" src="../../js/object_function/object.getPrototypeOf.js"></script>
 
 <p>Test <br/> sss</p>
-<text>Test <br /> text</text>
+<text>Test <br/> text</text>
+
+<ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+</ul>
+
+<script type="text/javascript">
+    var html = document.documentElement;
+    console.log(html);
+
+    var myList = document.getElementsByTagName("li");
+    console.log(myList);
+
+    var nodes = document.getElementsByTagName('*');
+    console.log(nodes);
+</script>
 </body>
 </html>
